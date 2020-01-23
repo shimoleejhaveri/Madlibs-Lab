@@ -41,6 +41,11 @@ def greet_person():
                            person=player,
                            compliment=compliment)
 
+@app.route('/game')
+def show_madlib_form():
+    """Ask user if they want to play a game"""
+
+    return render_template("compliment.html", person=player)
 
 if __name__ == '__main__':
     # Setting debug=True gives us error messages in the browser and also
